@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.deepPurple,
-        backgroundColor: Colors.black12
+        backgroundColor: Colors.black12,
+        scaffoldBackgroundColor: Colors.black12,
       ),
       home: const MyHomePage(title: 'Kronya'),
     );
@@ -74,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(widget.title, style: const TextStyle(color: Colors.white),),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -98,10 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              style: TextStyle(color: Colors.white),
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: const TextStyle(color: Colors.white),
             ),
           ],
         ),
